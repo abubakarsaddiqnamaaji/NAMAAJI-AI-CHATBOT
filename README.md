@@ -18,7 +18,7 @@ It supports both **English and Hausa** and is designed with a modern UI for bett
 
 ---
 
-## 🛠️ Built With
+## Built With
 
 - HTML5
 - Tailwind CSS
@@ -28,7 +28,7 @@ It supports both **English and Hausa** and is designed with a modern UI for bett
 
 ---
 
-## ⚙️ How It Works
+##  How It Works
 
 1. User types a message
 2. Message is sent to AI API (OpenRouter)
@@ -45,7 +45,7 @@ For production use, it is recommended to move the API call to a backend server t
 
 ---
 
-## 🎯 Future Improvements
+##  Future Improvements
 
 -  Voice assistant integration
 -  Math solver integration
