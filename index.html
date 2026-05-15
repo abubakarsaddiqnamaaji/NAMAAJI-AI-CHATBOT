@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="logo.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Namaaji AI Chatbot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #06b6d4;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body class="bg-black text-white overflow-hidden">
+  <div class="h-screen flex">
+    <aside class="hidden md:flex w-52 bg-zinc-950 border-r border-white/10 flex-col">
+      <div class="p-2 border-b border-white/10 flex items-center gap-3">
+        <img src="logo.png" alt="Logo" class="w-10 h-10 rounded-2xl bg-cyan-500/20  flex items-center justify-center"/>
+        <img src="name.png" alt="" class="h-6"/>
+      </div>
+      <div class="flex-1 p-4 space-y-3">
+        <button onclick="newChat()" class="w-full bg-cyan-500 hover:bg-cyan-400 transition-all text-black p-4 rounded-2xl font-semibold">
+          + New Chat
+        </button>
+         
+      </div>
+    </aside>
+
+    <main class="flex-1 flex flex-col">
+      <header class="border-b border-white/10 p-3 bg-zinc-950/50 backdrop-blur-lg flex justify-between items-center">
+        <div>
+          <h2 class="text-xl font-bold hidden md:block">
+            AI Chat Assistant
+          </h2>
+          <div class="p-2 border-b border-white/10 flex items-center gap-3  md:hidden">
+            <img src="logo.png" alt="Logo" class="w-10 h-10 rounded-2xl bg-cyan-500/20 border border-cyan-500/20 flex items-center justify-center"/>
+            <img src="name.png" alt="" class="h-6"/>
+        </div>
+        </div>
+
+        <div class="bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full border border-emerald-500/20 text-sm">
+          Online
+        </div>
+      </header>
+
+      <div id="chatBox" class="flex-1 overflow-y-auto p-6 space-y-6 bg-gradient-to-br from-black via-zinc-900 to-black">
+        <div class="flex gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-cyan-500/20 border border-cyan-500/20 flex items-center justify-center">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+
+          <div class="bg-white/5 border border-white/10 rounded-3xl px-5 py-4 max-w-xl">
+            Hello👋<br>
+            I am NAMAAJI AI your AI assistant.
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="p-3 border-t border-white/10 bg-zinc-950">
+
+        <div class="flex gap-3 bg-white/5 border border-white/10 rounded-2xl p-1">
+
+          <input id="userInput" type="text" placeholder="Type your message..." class="flex-1 bg-transparent outline-none text-white placeholder:text-gray-500 px-2"/>
+
+          <button onclick="alert('Voice input feature is not implemented yet.')" class="">
+            <i class="fa-solid fa-vo"></i>
+          </button>
+          <button onclick="mediaUpload()" class="">
+              <i class="fa-solid fa-paperclip text-gray-500 hover:text-gray-300 transition-all"></i>
+         </button>
+          <button onclick="sendMessage()" class="bg-cyan-400 hover:bg-cyan-300 transition-all text-black w-12 h-12 rounded-2xl flex items-center justify-center text-xl">
+             <i class="fa-solid fa-paper-plane"></i>
+          </button>
+
+        </div>
+
+        <p class="text-xs text-gray-500 mt-3 text-center">
+          Developed by <a href="https://abubakarsaddiqnamaaji.github.io" target="_blank" class="text-cyan-400 hover:underline">Abubakar Sadiq Namaaji</a>
+        </p>
+
+      </div>
+    </main>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
